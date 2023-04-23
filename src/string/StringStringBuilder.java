@@ -1,2 +1,5 @@
-package string;public class StringStringbuilder {
+package string;
+
+public class StringStringBuilder {
+
 }
