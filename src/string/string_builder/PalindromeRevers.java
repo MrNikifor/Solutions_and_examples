@@ -1,4 +1,4 @@
-package string;
+package string.string_builder;
 // Определить слово полиндром или нет.
 public class PalindromeRevers {
     public static void main(String[] args) {
