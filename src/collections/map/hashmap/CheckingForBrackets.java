@@ -19,10 +19,6 @@ public class CheckingForBrackets {
     }
 
     private static boolean findBrackets(String str) {
-<<<<<<< HEAD
-        String chekStr = "[6+(3*3)]";
-=======
->>>>>>> ef978ce (Merge remote-tracking branch 'origin/master')
         Map<Character,Character> pairs = new HashMap<>();// создаем проверяемые пары
         pairs.put('(',')');
         pairs.put('[',']');
