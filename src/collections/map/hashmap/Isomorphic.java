@@ -13,11 +13,11 @@ public class Isomorphic {
         String str2 = "doet";
         HashMap<Character,Character> testIsmorph = new HashMap<>();
         for (int i = 0; i < str1.length(); i++) {
-            Character ch1 = str1.charAt(i);
+            Character ch1 = str1.charAt(i); // Character - обьект для символьных примитивов
             Character ch2 = str2.charAt(i);
-            if(!testIsmorph.containsKey(ch1)) testIsmorph.put(ch1,ch2);
+            if(!testIsmorph.containsKey(ch1)) testIsmorph.put(ch1,ch2); // если строка пустая то добавляем символы
             else {
-                if(testIsmorph.get(ch1) != ch2) return false;
+                if(testIsmorph.get(ch1) != ch2) return false; // проверка символов двух строк
             }
 
         }
