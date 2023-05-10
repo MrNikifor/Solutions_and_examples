@@ -9,8 +9,8 @@ public class Isomorphic {
     }
 
     private static boolean testIsomorphic() {
-        String str1 = "coot";
-        String str2 = "doet";
+        String str1 = "codoc";
+        String str2 = "beled";
         HashMap<Character,Character> testIsmorph = new HashMap<>();
         for (int i = 0; i < str1.length(); i++) {
             Character ch1 = str1.charAt(i); // Character - обьект для символьных примитивов

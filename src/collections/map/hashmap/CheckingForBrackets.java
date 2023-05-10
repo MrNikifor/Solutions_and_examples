@@ -11,13 +11,17 @@ package collections.map.hashmap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
+/*"(){}[]"   =>  True
+"([{}])"   =>  True
+"(}"       =>  False
+"[(])"     =>  False
+"[({})](]" =>  False*/
 public class CheckingForBrackets {
     public static void main(String[] args) {
-        String chekStr = "[6+(3*3)";
+        String chekStr = "[({})](]";
         System.out.println(findBrackets(chekStr));
     }
-
+// Решение 1 по Map
     private static boolean findBrackets(String str) {
         Map<Character,Character> pairs = new HashMap<>();// создаем проверяемые пары
         pairs.put('(',')');
@@ -40,6 +44,20 @@ public class CheckingForBrackets {
                 }
             }
         }return states.isEmpty();// и после всех проверок если проверочный stack пустой то вернет на значение true
+// Решение стригой
+    }
+    public boolean isValid(String braces) {
+        int lengthOfBraces = braces.length();
+        for(int i = 0; i < lengthOfBraces; i++){
+            braces = braces.replace("{}", "").replace("[]", "").replace("()", "");
+        }
+        return braces.isEmpty();
+    }
+// Решение 3 регулярным выражением
+    public boolean isValid2(String s) {
+        int x = s.length();
+        s = s.replaceAll("\\(\\)|\\[\\]|\\{\\}","");
+        return s.length() == x ? false : s.length() == 0 || isValid(s);
     }
 
 }
