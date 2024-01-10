@@ -1,4 +1,4 @@
-package Boolean;
+package booleans;
 
 import java.time.LocalDate;
 
